@@ -1,0 +1,101 @@
+{
+  "name": "@luckylillia/plugin-ntqq-offline-email",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "NTQQ 掉线时通过 SMTP 发送邮件通知",
+  "main": "./lib/index.js",
+  "types": "./lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "author": "LuckyLilliaDev",
+  "license": "GPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuckyLilliaDev/lucky-lillia-plugin-ntqq-offline-email.git"
+  },
+  "engines": {
+    "node": ">=22.15"
+  },
+  "keywords": [
+    "luckylillia-plugin",
+    "ntqq",
+    "email",
+    "smtp"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "tsc --noEmit",
+    "test": "vitest run",
+    "prepack": "npm run check && npm run build"
+  },
+  "dependencies": {
+    "hono": "^4.13.5",
+    "nodemailer": "^10.6.0"
+  },
+  "peerDependencies": {
+    "@luckylillia/plugin-nt-protocol": "^1.0.1",
+    "@luckylillia/plugin-sdk": "^1.0.1",
+    "cordis": "4.0.0-rc.11",
+    "react": "^19.0.0",
+    "schemastery": "^3.18.0"
+  },
+  "peerDependenciesMeta": {
+    "@luckylillia/plugin-nt-protocol": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@luckylillia/plugin-nt-protocol": "^1.0.1",
+    "@luckylillia/plugin-sdk": "^1.0.1",
+    "@tailwindcss/postcss": "^4.2.0",
+    "@types/node": "^24.12.4",
+    "@types/nodemailer": "^8.0.1",
+    "@types/react": "^19.0.0",
+    "esbuild": "~0.28.0",
+    "lucide-react": "^0.575.0",
+    "postcss": "^8.5.0",
+    "react": "^19.0.0",
+    "tailwindcss": "^4.2.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.11"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "llbot": {
+    "title": "NTQQ掉线邮件通知",
+    "description": "监控 NTQQ 账号掉线、会话失效和持续断网，通过 SMTP 发邮件提醒。支持登录前测试邮件。",
+    "category": "tool",
+    "icon": "mail",
+    "dependencies": {
+      "@luckylillia/plugin-nt-protocol": "^1.0.1"
+    },
+    "service": {
+      "implements": [
+        "emailNotification"
+      ],
+      "optional": [
+        "qqProtocol",
+        "webuiServer"
+      ],
+      "labels": {
+        "qqProtocol": "NTQQ 协议"
+      }
+    },
+    "webui": "./lib/client/index.js"
+  }
+}
