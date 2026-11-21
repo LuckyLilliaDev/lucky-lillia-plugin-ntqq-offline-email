@@ -1,6 +1,6 @@
 {
-  "name": "@luckylillia/plugin-ntqq-offline-email",
-  "version": "1.0.0",
+  "name": "@luckylillia-dev/plugin-ntqq-offline-email",
+  "version": "1.0.1",
   "type": "module",
   "description": "NTQQ 掉线时通过 SMTP 发送邮件通知",
   "main": "./lib/index.js",
@@ -43,14 +43,14 @@
     "nodemailer": "^10.6.0"
   },
   "peerDependencies": {
-    "@luckylillia/plugin-nt-protocol": "^1.0.1",
-    "@luckylillia/plugin-sdk": "^1.0.1",
+    "@luckylillia-dev/plugin-nt-protocol": "^1.0.1",
+    "@luckylillia-dev/plugin-sdk": "^1.0.1",
     "cordis": "4.0.0-rc.11",
     "react": "^19.0.0",
     "schemastery": "^3.18.0"
   },
   "peerDependenciesMeta": {
-    "@luckylillia/plugin-nt-protocol": {
+    "@luckylillia-dev/plugin-nt-protocol": {
       "optional": true
     },
     "react": {
@@ -58,8 +58,7 @@
     }
   },
   "devDependencies": {
-    "@luckylillia/plugin-nt-protocol": "^1.0.1",
-    "@luckylillia/plugin-sdk": "^1.0.1",
+    "@luckylillia-dev/plugin-sdk": "npm:@luckylillia/plugin-sdk@^1.0.1",
     "@tailwindcss/postcss": "^4.2.0",
     "@types/node": "^24.12.4",
     "@types/nodemailer": "^8.0.1",
@@ -82,7 +81,7 @@
     "category": "tool",
     "icon": "mail",
     "dependencies": {
-      "@luckylillia/plugin-nt-protocol": "^1.0.1"
+      "@luckylillia-dev/plugin-nt-protocol": "^1.0.1"
     },
     "service": {
       "implements": [

@@ -2,7 +2,7 @@ import { Context, Service } from 'cordis'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import * as EmailPlugin from '../src/index'
 import { EMAIL_API } from '../src/testRoutes'
-import type { FetchHandler } from '@luckylillia/plugin-sdk'
+import type { FetchHandler } from '@luckylillia-dev/plugin-sdk'
 
 const smtp = vi.hoisted(() => ({ send: vi.fn(async () => ({ messageId: 'mock-id' })) }))
 vi.mock('nodemailer', () => ({ default: { createTransport: () => ({ sendMail: smtp.send }) } }))

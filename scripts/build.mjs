@@ -28,7 +28,7 @@ if (errors.length) throw new Error(ts.formatDiagnosticsWithColorAndContext(error
 await build({
   absWorkingDir: root, entryPoints: ['src/client/index.tsx'], outfile: 'lib/client/module.js', bundle: true,
   format: 'esm', platform: 'browser', target: 'es2022', jsx: 'automatic', minify: true,
-  external: ['react', 'react/*', 'react-dom', 'react-dom/*', '@luckylillia/plugin-sdk/webui'],
+  external: ['react', 'react/*', 'react-dom', 'react-dom/*', '@luckylillia-dev/plugin-sdk/webui'],
 })
 const require = createRequire(import.meta.url)
 const tw = path.dirname(require.resolve('tailwindcss/package.json')).replaceAll('\\', '/')

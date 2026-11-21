@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { Loader2, Send } from 'lucide-react'
 import {
   SchemaSettings, usePluginContext, usePluginStatus, type PluginConfigState, type WebUIPlugin,
-} from '@luckylillia/plugin-sdk/webui'
+} from '@luckylillia-dev/plugin-sdk/webui'
 
-export const name = '@luckylillia/plugin-ntqq-offline-email'
+export const name = '@luckylillia-dev/plugin-ntqq-offline-email'
 
 // The bot fills in the stored password when the form still holds the mask (testRoutes.ts)
 const TestButton: React.FC<{ config: PluginConfigState }> = ({ config }) => {

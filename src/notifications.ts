@@ -1,4 +1,4 @@
-import type {} from '@luckylillia/plugin-nt-protocol/contracts'
+import type {} from '@luckylillia-dev/plugin-nt-protocol/contracts'
 import { Context, Service } from 'cordis'
 import { EmailService, BotInfo } from './service'
 import { EmailConfigManager, EmailSchema, EmailSettings } from './config'

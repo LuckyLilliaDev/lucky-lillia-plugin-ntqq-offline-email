@@ -15,7 +15,7 @@ export interface EmailConfig {
   to: string
 }
 
-/** What @luckylillia/plugin-ntqq-offline-email stores: its entry switch says whether notifications are on. */
+/** What @luckylillia-dev/plugin-ntqq-offline-email stores: its entry switch says whether notifications are on. */
 export type EmailSettings = Omit<EmailConfig, 'enabled'>
 
 export interface ValidationResult {

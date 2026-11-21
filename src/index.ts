@@ -1,11 +1,11 @@
-import type {} from '@luckylillia/plugin-sdk'
-import type {} from '@luckylillia/plugin-nt-protocol/contracts'
+import type {} from '@luckylillia-dev/plugin-sdk'
+import type {} from '@luckylillia-dev/plugin-nt-protocol/contracts'
 import { Context } from 'cordis'
 import { EmailSchema, type EmailSettings } from './config'
 import { EmailNotificationService } from './notifications'
 import { createEmailRoutes, EMAIL_API } from './testRoutes'
 
-export const name = '@luckylillia/plugin-ntqq-offline-email'
+export const name = '@luckylillia-dev/plugin-ntqq-offline-email'
 export const Config = EmailSchema
 export type Config = EmailSettings
 
